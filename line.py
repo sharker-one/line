@@ -28,8 +28,8 @@ def run_click_simulation(click_count=500, base_x=950, base_y=600):
             timestamp = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
             print(f"第{i}次点击：坐标({current_x}, {current_y})，时间：{timestamp}")
 
-            # 每 50 次点击时询问是否退出，可根据需求调整
-            if i % 50 == 0:
+            # 每 500 次点击时询问是否退出，可根据需求调整
+            if i % click_count == 0:
                 user_input = input("已点击 500 次，按 Enter 继续，输入 q 退出：").strip().lower()
                 if user_input == 'q':
                     print("用户选择退出，程序结束...")
